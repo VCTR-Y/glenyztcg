@@ -9,13 +9,13 @@ function About() {
           
           {/* Title */}
           <h2 className="text-4xl font-bold">About</h2>
-    </div>
+        </div>
 
-      {/* Description Text */}
-      <div className="text-center">
-        <p className="text-xl mt-4">Small pokemon business based in Burnaby, Canada. Buying/Selling anything Pokémon</p>
+          {/* Description Text */}
+          <div className="text-center">
+            <p className="text-xl mt-4">Small pokemon card business based in Burnaby, Canada. Buying/Selling anything Pokémon</p>
+          </div>
       </div>
-  </div>
 
 
   );
