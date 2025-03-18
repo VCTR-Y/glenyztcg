@@ -1,7 +1,40 @@
 @import "tailwindcss";
 
-html {
+:root {
   scroll-behavior: smooth;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+@keyframes subtle-glow-pulse {
+  0% {
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4))
+              drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))
+              drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
+  }
+  100% {
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.4),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4))
+              drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  }
+}
+
+.subtle-glow {
+  animation: subtle-glow-pulse 3s infinite;
 }
 
 /* :root {

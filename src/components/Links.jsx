@@ -4,7 +4,7 @@ import whatnot_logo from "/whatnot.jpg";
 
 function Links() {
   return (
-    <div id="links" className="relative w-448 h-auto bg-opacity-50 backdrop-blur-xs rounded-lg shadow-2xl m-4 p-4 scroll-mt-42 border-2">
+    <div id="links" className="relative w-448 h-auto bg-opacity-50 backdrop-blur-xs rounded-lg shadow-[16px_16px_16px_rgba(0,0,0,0.6)] m-4 p-4 scroll-mt-42 border-2">
       <h1 class="text-4xl font-bold text-center">Links</h1>
       <div className="flex justify-center items-center space-x-4 mt-4">
         {/* Instagram Link */}
@@ -12,7 +12,7 @@ function Links() {
           href="https://www.instagram.com/glenyztcg/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center rounded-lg p-4 shadow-2xl border-1 hover:bg-orange-100 transition duration-300"
+          className="flex items-center justify-center rounded-lg p-4 shadow-2xl border-1 hover:bg-amber-600 transition duration-300"
         >
           <img
             src={instagram_logo}
@@ -27,7 +27,7 @@ function Links() {
           href="https://www.tiktok.com/@glenyztcg"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center rounded-lg p-4 shadow-2xl border-1 hover:bg-orange-100 transition duration-300"
+          className="flex items-center justify-center rounded-lg p-4 shadow-2xl border-1 hover:bg-amber-600 transition duration-300"
         >
           <img
             src={tiktok_logo}
@@ -42,7 +42,7 @@ function Links() {
           href="https://www.whatnot.com/user/glenyz"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center rounded-lg p-4 shadow-2xl border-1 hover:bg-orange-100 transition duration-300"
+          className="flex items-center justify-center rounded-lg p-4 shadow-2xl border-1 hover:bg-amber-600 transition duration-300"
         >
           <img
             src={whatnot_logo}
