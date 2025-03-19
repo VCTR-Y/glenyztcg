@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLj9gYQThEVfBcvfN8nhKLLEbsI5EukVU0cmyQqGZOIE93dcjpbtMK_9_Zii7izUKRUnZq4zlLE8zZ6n1vwNXYLclmoaUBWFp0FfQHZKsU5KO52Z9fgGc7VhVHpN2rJyZ-oq0BbDUECAQ_n2Vmld0tesFhFjpQ-zpMX89mUGzUdyrnOePQvWaWYbJvfeTHMOIIJZN3A5-hvZLiCbriMdkG7I6RHhyvrBVR_hue-qwxyrtDB7DfCp8Dp73CRratpV_hj2oPEafayR-bib-I4caCoe7Kn-uw&lib=MbhIAs9sIAbziN0xr6uxTdXOXm488-rdK");
+        const res = await fetch(import.meta.env.VITE_GOOGLE_SHEETS_URL);
         const data = await res.json();
         setInventory(data.data);
       } catch (error) {
