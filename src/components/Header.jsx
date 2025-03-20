@@ -6,7 +6,7 @@ function Header() {
     <header className="sticky top-0 z-50 shadow-2xl">
       <div className="flex items-center justify-between bg-gray-900 p-6 border-b-2">
         <img src={glenyz_logo} alt="Glenyz" className="w-16 h-16 rounded-full subtle-glow hover:scale-125 transition-transform duration-300" />
-        <h1 className="text-7xl font-sans font-bold flex-1 text-center tracking-wide subtle-glow">GlenyzTCG</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-sans font-bold flex-1 text-center tracking-wide subtle-glow">GlenyzTCG</h1>
         <div className="w-16 h-16"></div> {/* Empty div for spacing */}
       </div>
       <nav className="flex justify-center items-center w-full bg-gray-800 py-2 mb-6">

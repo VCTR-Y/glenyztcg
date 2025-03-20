@@ -47,9 +47,9 @@ function App() {
           <source src="/Pokemon.mp4" type="video/mp4" /> {/* Video Source: https://x.com/stefscribbles?fbclid=IwAR3RCzg8NBCYklNII8Y0VuGbRp8BEQYL7Q7-qqGOLYf2cebeIuyaTHGOfYw */}
           Your browser does not support the video tag.
         </video>
-        <div className="fixed top-0 left-0 w-screen h-screen bg-black opacity-40"></div>
+        <div className="fixed top-0 left-0 w-screen h-screen bg-black opacity-65"></div>
         <Header />
-        <div className="relative z-10 flex flex-col justify-center items-center ">
+        <div className="relative z-10 flex flex-col justify-center items-center">
           <About />
           <Inventory inventory={inventory}/>
           <Links />
