@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full h-full z-0 bg-gradient-to-b from-sky-800 via-[#3362ad] to-blue-400"></div>
+      <div className="fixed top-0 left-0 w-full h-full z-0 bg-gradient-to-tr from-sky-500 via-[#3362ad] to-sky-500"></div>
       <section className="pointer-events-none"> 
           <div className="air air1"></div>
           <div className="air air2"></div>
