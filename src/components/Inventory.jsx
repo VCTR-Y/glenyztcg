@@ -20,12 +20,12 @@ function Inventory(props) {
         </ul>
       </nav>
       <h2 id="cards" className="text-4xl font-bold text-center mb-4 scroll-mt-42 border-b-1">Cards</h2> {/* Cards Section */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6">
         {cards?.map((item, index) => (
           <Card key={index} image={item.image} title={item.title} price={item.price} />
         ))}
         </div>
-        <h2 id="packs" className="text-4xl font-bold text-center mb-4 scroll-mt-42 border-b-1">Packs</h2> {/* Packs Section */}
+      <h2 id="packs" className="text-4xl font-bold text-center mb-4 scroll-mt-42 border-b-1 mt-8">Packs</h2> {/* Packs Section */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
         {packs?.map((item, index) => (
           <Pack key={index} image={item.image} title={item.title} price={item.price} />
