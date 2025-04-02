@@ -38,18 +38,15 @@ function App() {
 
   return (
     <>
+      <div className="fixed top-0 left-0 w-full h-full z-0 bg-gradient-to-tr from-sky-500 via-[#3362ad] to-sky-500"></div>
+      <section className="pointer-events-none"> 
+          <div className="air air1"></div>
+          <div className="air air2"></div>
+          <div className="air air3"></div>
+          <div className="air air4"></div>
+        </section>
       <div className="relative min-h-screen">
-        <video
-          autoPlay
-          loop
-          muted
-          className="fixed top-0 left-0 w-screen h-screen object-cover pt-36"
-        >
-          <source src="/Pokemon.mp4" type="video/mp4" /> {/* Video Source: https://x.com/stefscribbles?fbclid=IwAR3RCzg8NBCYklNII8Y0VuGbRp8BEQYL7Q7-qqGOLYf2cebeIuyaTHGOfYw */}
-          Your browser does not support the video tag.
-        </video>
-        <div className="fixed top-0 left-0 w-screen h-screen bg-black opacity-65"></div>
-        <Header />
+        <Header/>
         <div className="relative z-10 flex flex-col justify-center items-center">
           <MiniLinks />
           <About />
