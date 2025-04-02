@@ -3,6 +3,7 @@ import Header from './components/Header.jsx';
 import About from './components/About.jsx';
 import Inventory from './components/Inventory.jsx';
 import Links from './components/Links.jsx';
+import MiniLinks from './components/MiniLinks.jsx';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
@@ -50,6 +51,7 @@ function App() {
         <div className="fixed top-0 left-0 w-screen h-screen bg-black opacity-65"></div>
         <Header />
         <div className="relative z-10 flex flex-col justify-center items-center">
+          <MiniLinks />
           <About />
           <Inventory inventory={inventory}/>
           <Links />
