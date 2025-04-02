@@ -5,7 +5,7 @@ import messenger_logo from "/messenger.png";
 
 function MiniLinks() {
   return (
-    <div id="links" className="relative w-448 h-auto bg-opacity-50 backdrop-blur-xs rounded-lg shadow-[16px_16px_16px_rgba(0,0,0,0.6)] m-4 p-4 scroll-mt-42">
+    <div id="links" className="relative w-448 h-auto bg-opacity-50 backdrop-blur-xs border-1 rounded-lg shadow-[16px_16px_16px_rgba(0,0,0,0.6)] m-4 p-4 scroll-mt-42">
       <div className="flex flex-col sm:flex-row justify-center items-center space-x-4 mt-4">
         
         {/* Instagram Link */}
