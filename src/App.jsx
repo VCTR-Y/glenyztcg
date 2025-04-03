@@ -48,7 +48,7 @@ function App() {
       <div className="relative min-h-screen">
         <Header/>
         <div className="relative z-10 flex flex-col justify-center items-center">
-          <MiniLinks />
+          {/* <MiniLinks /> */}
           <About />
           <Inventory inventory={inventory}/>
           <Links />

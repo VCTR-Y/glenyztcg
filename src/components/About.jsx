@@ -20,12 +20,12 @@ function About() {
           <p className="text-xl mt-4"> Below is my collector's guide for new collectors. Currently the guide contains simple but important tips that people should know when first starting their collection.</p>
           </div>
 
-          {/* TikTok Link */}
+          {/* Guide */}
             <a
               href="https://docs.google.com/document/d/1YBdYiGFLRX4q5fJjwIal8wum2KDmoJ2jRrJXYhGALrI/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center rounded-lg m-2 w-42 h-22 shadow-2xl border-1 hover:bg-amber-600 transition duration-300"
+              className="flex items-center justify-center rounded-lg m-2 w-36 h-18 shadow-2xl border-1 hover:bg-amber-600 transition duration-300"
             >
               <img src={book_logo} alt="Guide" className="w-15 h-15 mr-3" />
               <span className="text-xl md:text-lg lg:text-xl font-semibold">Guide</span>
