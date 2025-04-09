@@ -70,11 +70,15 @@ function Inventory(props) {
           <option value="high-to-low" className="bg-gray-400">Price: High to Low</option>
         </select>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6">
-        {sortedCards?.map((item, index) => (
-          <Card key={index} image={item.image} title={item.title} price={item.price} />
-        ))}
+      {sortedCards.length === 0 ? (
+        <p className="text-center text-red-300 text-4xl m-12">No cards match your search!</p>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6">
+          {sortedCards.map((item, index) => (
+            <Card key={index} image={item.image} title={item.title} price={item.price} />
+          ))}
         </div>
+      )}
       <h2 id="packs" className="text-4xl font-bold text-center mb-4 scroll-mt-42 border-b-1 mt-8">Packs</h2> {/* Packs Section */}
       <div className="flex justify-center items-center m-4">
         <div className="flex justify-center items-center border rounded-lg max-w-xs w-full p-2">
@@ -97,11 +101,15 @@ function Inventory(props) {
           <option value="high-to-low" className="bg-gray-400">Price: High to Low</option>
         </select>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
-        {sortedPacks?.map((item, index) => (
-          <Pack key={index} image={item.image} title={item.title} price={item.price} />
-        ))}
+      {sortedPacks.length === 0 ? (
+        <p className="text-center text-red-300 text-4xl m-12">No packs match your search!</p>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
+          {sortedPacks.map((item, index) => (
+            <Pack key={index} image={item.image} title={item.title} price={item.price} />
+          ))}
         </div>
+      )}
     </div>
   );
 }
