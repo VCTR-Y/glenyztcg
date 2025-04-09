@@ -7,6 +7,8 @@ function Inventory(props) {
   const { inventory } = props;
   const [cardSearchQuery, setCardSearchQuery] = useState("");
   const [packSearchQuery, setPackSearchQuery] = useState("");
+  const [cardSortOrder, setCardSortOrder] = useState("default");
+  const [packSortOrder, setPackSortOrder] = useState("default");
 
   const items = inventory;
 
@@ -19,9 +21,23 @@ function Inventory(props) {
     ) : cards;
 
   const searchPacks = packSearchQuery.trim() ? 
-  packs.filter((pack) => 
-    pack.title.toLowerCase().includes(packSearchQuery.toLowerCase())
+    packs.filter((pack) => 
+      pack.title.toLowerCase().includes(packSearchQuery.toLowerCase())
   ) : packs;
+
+  const sortItems = (items, sortOrder) => {
+    const parsePrice = (price) => parseFloat(price.replace(/[^0-9.-]+/g, ""));
+    if (sortOrder === "low-to-high") {
+      return [...items].sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    } else if (sortOrder === "high-to-low") {
+      return [...items].sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+    } else {
+      return items;
+    }
+  }
+
+  const sortedCards = sortItems(searchCards, cardSortOrder);
+  const sortedPacks = sortItems(searchPacks, packSortOrder);
 
   return (
     <div id="inventory" className="w-full max-w-412 mx-auto bg-opacity-50 backdrop-blur-xs rounded-lg shadow-[16px_16px_16px_rgba(0,0,0,0.6)] m-4 p-4 scroll-mt-42 border-2" >
@@ -33,20 +49,29 @@ function Inventory(props) {
         </ul>
       </nav>
       <h2 id="cards" className="text-4xl font-bold text-center mb-4 scroll-mt-42 border-b-1">Cards</h2> {/* Cards Section */}
-      <div className="flex justify-center items-center m-4">
+      <div className="flex justify-center items-center mb-4">
         <div className="flex justify-center items-center border rounded-lg max-w-xs w-full p-2">
           <img src={searchIcon} className="h-5 w-5 m-2" />
           <input 
-            type="text" 
+            type="text"   
             placeholder="Search..." 
             value={cardSearchQuery} 
             onChange={(e) => setCardSearchQuery(e.target.value)}
             className="w-full text-lg outline-0 ml-2"
           />
         </div>
+        <select
+          value={cardSortOrder}
+          onChange={(e) => setCardSortOrder(e.target.value)}
+          className="ml-4 p-2 border rounded-lg"
+          >
+          <option value="default" className="bg-gray-400">Sort by: Default</option>
+          <option value="low-to-high" className="bg-gray-400">Price: Low to High</option>
+          <option value="high-to-low" className="bg-gray-400">Price: High to Low</option>
+        </select>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6">
-        {searchCards?.map((item, index) => (
+        {sortedCards?.map((item, index) => (
           <Card key={index} image={item.image} title={item.title} price={item.price} />
         ))}
         </div>
@@ -62,9 +87,18 @@ function Inventory(props) {
             className="w-full text-lg outline-0 ml-2"
           />
         </div>
+        <select
+          value={packSortOrder}
+          onChange={(e) => setPackSortOrder(e.target.value)}
+          className="ml-4 p-2 border rounded-lg"
+          >
+          <option value="default" className="bg-gray-400">Sort by: Default</option>
+          <option value="low-to-high" className="bg-gray-400">Price: Low to High</option>
+          <option value="high-to-low" className="bg-gray-400">Price: High to Low</option>
+        </select>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
-        {searchPacks?.map((item, index) => (
+        {sortedPacks?.map((item, index) => (
           <Pack key={index} image={item.image} title={item.title} price={item.price} />
         ))}
         </div>
