@@ -75,7 +75,7 @@ function Inventory(props) {
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6">
           {sortedCards.map((item, index) => (
-            <Card key={index} image={item.image} title={item.title} price={item.price} />
+            <Card key={index} image={item.image} title={item.title} price={item.price} link={item.link} />
           ))}
         </div>
       )}
@@ -106,7 +106,7 @@ function Inventory(props) {
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
           {sortedPacks.map((item, index) => (
-            <Pack key={index} image={item.image} title={item.title} price={item.price} />
+            <Pack key={index} image={item.image} title={item.title} price={item.price} link={item.link} />
           ))}
         </div>
       )}
