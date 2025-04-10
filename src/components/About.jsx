@@ -15,8 +15,8 @@ function About() {
 
           {/* Description Text */}
           <div className="text-center">
+          <p className="text-5xl mt-4 text-green-300"> Online shipping COMING SOON</p>
           <p className="text-xl mt-4">Small pokemon card business based in Burnaby, Canada. Buying/Selling anything Pokémon</p>
-          <p className="text-xl mt-4"> To buy anything from this site, please contact me through my Instagram or Facebook account.</p>
           <p className="text-xl mt-4"> Below is my collector's guide for new collectors. Currently the guide contains simple but important tips that people should know when first starting their collection.</p>
           </div>
 
