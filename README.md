@@ -1,3 +1,23 @@
+## Getting Started
+
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
+
+## Link to Website:
+https://glenyztcg.vercel.app/
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -10,6 +30,3 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-## Link:
-https://glenyztcg.vercel.app/
