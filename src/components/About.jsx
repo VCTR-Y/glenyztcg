@@ -15,21 +15,20 @@ function About() {
 
           {/* Description Text */}
           <div className="text-center">
-          <p className="text-5xl mt-4 text-green-300"> Online shipping now available!</p>
-          <p className="text-xl mt-4 mb-8">Small pokemon card business based in Burnaby, Canada. Buying/Selling anything Pokémon</p>
-          <p className="text-xl mt-4"> To buy from this site, browse for the card you like then click on it to go to my shopify store. If you would like to do local pickup, please msg me on instagram to schedule a pickup time.</p>
-          <p className="text-xl mt-4"> Below is my collector's guide for new collectors. Currently the guide contains simple but important tips that people should know when first starting their collection.</p>
+          <p className="text-5xl mt-4 text-green-300"> This is my Old Site...</p>
+          <p className="text-xl mt-4 mb-8">To buy from me, go to my Shopify store in the link below (don't rely on this site for stock or prices, I'm not upodating it anymore)</p>
+          <p className="text-xl mt-4">Small pokemon card business based in Burnaby, Canada. Buying/Selling anything Pokémon</p>
           </div>
 
           {/* Guide */}
             <a
-              href="https://docs.google.com/document/d/1YBdYiGFLRX4q5fJjwIal8wum2KDmoJ2jRrJXYhGALrI/edit?usp=sharing"
+              href="https://glenyztcg.myshopify.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center rounded-lg mt-4 w-36 h-18 shadow-2xl border-1 hover:bg-amber-600 transition duration-300"
             >
-              <img src={book_logo} alt="Guide" className="w-15 h-15 mr-3" />
-              <span className="text-xl md:text-lg lg:text-xl font-semibold">Guide</span>
+              <img src={glenyz_logo} alt="New Site" className="w-15 h-15 mr-3" />
+              <span className="text-xl md:text-lg lg:text-xl font-semibold">New Site</span>
             </a>
       </div>
   );
